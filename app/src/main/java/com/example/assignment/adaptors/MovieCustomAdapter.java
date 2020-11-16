@@ -32,6 +32,21 @@ import com.example.assignment.R;
             this.description=description;
 
         }
+        public View getView(int position,View view,ViewGroup parent) {
+            LayoutInflater inflater=context.getLayoutInflater();
+            View rowView=inflater.inflate(R.layout.movies_row_layout, null,true);
 
+            TextView titleText = (TextView) rowView.findViewById(R.id.title);
+            ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
+            TextView ratingText = (TextView) rowView.findViewById(R.id.rating);
+            TextView descriptiontext=(TextView) rowView.findViewById(R.id.description);
+            titleText.setText(maintitle[position]);
+            imageView.setImageResource(imgid[position]);
+            ratingText.setText(rating[position]);
+            descriptiontext.setText(description[position]);
+
+            return rowView;
+
+        };
 
     }
