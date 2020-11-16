@@ -41,9 +41,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MovieCustomAdapter adapter=new MovieCustomAdapter(this, maintitle, rating,imgid,description);
-        list=(ListView)findViewById(R.id.list);
-        list.setAdapter(adapter);
+        
 
 
 
